@@ -30,7 +30,7 @@ export default function Main() {
     useEffect(() => {
         // Função para buscar os dados do Firestore ao carregar a página
         async function fetchEmojis() {
-            const docRef = doc(collection(db, 'teams'), 'emojiData')
+            const docRef = doc(collection(db, 'teams'), 'emojiData1h')
             const docSnap = await getDoc(docRef)
 
             if (docSnap.exists()) {
@@ -46,7 +46,7 @@ export default function Main() {
 
     async function saveEmojis(data: { equipe1: string[], equipe2: string[] }) {
         try {
-            await setDoc(doc(collection(db, 'teams'), 'emojiData'), data)
+            await setDoc(doc(collection(db, 'teams'), 'emojiData1h'), data)
         } catch (error) {
             console.error("Error writing document: ", error)
         }
@@ -161,7 +161,7 @@ export default function Main() {
                             e.stopPropagation()
                             handlePicker('equipe2')
                         }}
-                        className="bg-teal-700 text-white font-semibold w-32 h-8 rounded-lg mt-2"
+                        className="bg-teal-700 text-white font-semibold w-32 h-8 rounded-lg mt-2 mb-4"
                     >
                         Escolher emoji
                     </button>
