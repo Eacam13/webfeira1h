@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
-import Equipe1 from '../../assets/equipe1.jpg'
-import Equipe2 from '../../assets/equipe2.jpg'
+import Equipe1 from '../../assets/equipe1.jpeg'
+import Equipe2 from '../../assets/equipe2.jpeg'
 import data from '@emoji-mart/data'
 import Picker from '@emoji-mart/react'
 import ProgressBar from '@ramonak/react-progress-bar'
